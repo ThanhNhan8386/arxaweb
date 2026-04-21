@@ -1,44 +1,46 @@
-import { Briefcase, FlaskConical, Globe2, ShieldCheck } from 'lucide-react'
-import { SectionTitle } from '../ui/SectionTitle'
+import { Calendar } from 'lucide-react'
+import { PlaceholderImage } from '../ui/PlaceholderImage'
 
-const careerItems = [
-  { icon: ShieldCheck, label: 'Operational leaders for pharmaceutical logistics and compliance' },
-  { icon: FlaskConical, label: 'Clinical research specialists with trial management experience' },
-  { icon: Globe2, label: 'Supply chain experts focused on global distribution' },
-  { icon: Briefcase, label: 'Quality assurance professionals driving regulatory excellence' },
+const newsItems = [
+  {
+    id: 1,
+    date: '1/14/23',
+    title: 'The signing ceremony of exclusive distribution agreement in the US market.',
+    image: '/news-image-1.jpg',
+  },
 ]
 
 export function CareersSection() {
   return (
-    <section className="bg-white py-24" id="careers">
+    <section className="bg-white py-24" id="news">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-8 flex items-center justify-between border-b border-gray-200 pb-4">
-          <span className="guideline-title">People, Culture & Community</span>
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gray-500">Employee Experience</span>
-        </div>
-        <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-          <div>
-            <SectionTitle
-              eyebrow="Careers"
-              title="Join ARXA and help shape the future of pharmaceutical care."
-              subtitle="We are looking for collaborators who share our dedication to quality, compliance, and patient-first innovation."
-            />
-          </div>
-          <div className="rounded-3xl border border-gray-200 bg-gray-50 p-8 shadow-sm">
-            <ul className="space-y-4 text-gray-700">
-              {careerItems.map((item) => {
-                const Icon = item.icon
-                return (
-                  <li key={item.label} className="flex items-start gap-3 rounded-2xl border border-gray-200 bg-white px-4 py-3">
-                    <span className="mt-0.5 inline-flex h-9 w-9 items-center justify-center rounded-xl bg-red-50 text-red-600">
-                      <Icon className="h-5 w-5" aria-hidden="true" />
-                    </span>
-                    <span className="text-sm leading-6">{item.label}</span>
-                  </li>
-                )
-              })}
-            </ul>
-          </div>
+        <h2 className="mb-16 text-center text-5xl font-bold text-navy-800">Latest News</h2>
+        
+        <div className="space-y-12">
+          {newsItems.map((item) => (
+            <article key={item.id} className="grid gap-8 rounded-3xl border border-gray-200 bg-white p-8 shadow-sm lg:grid-cols-2 lg:items-center">
+              <div className="space-y-6">
+                <div className="flex items-center gap-2 text-sm text-gray-500">
+                  <Calendar className="h-4 w-4" />
+                  <span>{item.date}</span>
+                </div>
+                <h3 className="text-2xl font-bold text-navy-800">{item.title}</h3>
+                <a 
+                  href="/news/signing-ceremony" 
+                  className="inline-block text-purple-600 hover:text-purple-700 transition"
+                >
+                  Read More
+                </a>
+              </div>
+              <div className="rounded-2xl overflow-hidden">
+                <img 
+                  src="/news/a5.png" 
+                  alt="News Image"
+                  className="w-full h-auto"
+                />
+              </div>
+            </article>
+          ))}
         </div>
       </div>
     </section>

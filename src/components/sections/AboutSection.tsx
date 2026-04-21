@@ -1,25 +1,12 @@
-import { ArrowRight, FlaskConical, Globe2, Heart, ShieldCheck, Zap } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import { Button } from '../ui/Button'
 import { SectionTitle } from '../ui/SectionTitle'
 import { PlaceholderImage } from '../ui/PlaceholderImage'
-
-const features = [
-  { icon: ShieldCheck, label: 'Trust & Compliance' },
-  { icon: FlaskConical, label: 'Scientific Excellence' },
-  { icon: Heart, label: 'Patient-Centered Care' },
-  { icon: Zap, label: 'Continuous Innovation' },
-  { icon: Globe2, label: 'Global Impact' },
-] as const
 
 export function AboutSection() {
   return (
     <section className="bg-white py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-8 flex items-center justify-between border-b border-gray-200 pb-4">
-          <span className="guideline-title">Stationery & Digital Applications</span>
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gray-500">Brand Guidelines</span>
-        </div>
-
         <div className="grid gap-16 lg:grid-cols-2">
         <div className="relative">
           <PlaceholderImage label="About ARXA" aspectRatio="4/3" theme="light" />
@@ -41,22 +28,6 @@ export function AboutSection() {
             <p>
               With regional expertise, international logistics, and science-first research, we help organizations scale treatments responsibly, improve access, and preserve quality across every step of the supply chain.
             </p>
-          </div>
-
-          <div className="grid gap-4 sm:grid-cols-2">
-            {features.map((feature) => {
-              const Icon = feature.icon
-              return (
-                <div key={feature.label} className="flex items-start gap-3 rounded-2xl border border-gray-200 bg-gray-50 px-4 py-3">
-                  <div className="mt-1 h-10 w-10 rounded-2xl bg-red-50 text-red-600 shadow-sm">
-                    <Icon className="m-2 h-6 w-6" aria-hidden="true" />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-gray-800">{feature.label}</p>
-                  </div>
-                </div>
-              )
-            })}
           </div>
 
           <Button variant="ghost" size="md" href="/about" icon={ArrowRight} iconPosition="right">

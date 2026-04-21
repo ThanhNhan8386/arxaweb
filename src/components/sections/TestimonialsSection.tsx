@@ -32,10 +32,6 @@ export function TestimonialsSection() {
   return (
     <section className="bg-white py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-8 flex items-center justify-between border-b border-gray-200 pb-4">
-          <span className="guideline-title">Partner Voices</span>
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gray-500">Trusted Worldwide</span>
-        </div>
         <SectionTitle title="Trusted by Partners Worldwide" subtitle="Hear from the organizations who rely on ARXA for pharmaceutical solutions and research support." align="center" theme="dark" />
         <div className="mt-14 grid gap-6 md:grid-cols-3">
           {testimonials.map((testimonial) => (

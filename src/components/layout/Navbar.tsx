@@ -17,7 +17,9 @@ export function Navbar() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <div className="flex items-center gap-4">
-          <Logo variant="dark" size="md" />
+          <NavLink to="/">
+            <Logo variant="dark" size="md" />
+          </NavLink>
         </div>
 
         <nav className="hidden items-center gap-10 lg:flex" role="navigation" aria-label="Main navigation">
@@ -67,7 +69,9 @@ export function Navbar() {
           aria-modal="true"
         >
           <div className="flex items-center justify-between">
-            <Logo variant="light" size="lg" />
+            <NavLink to="/" onClick={close}>
+              <Logo variant="light" size="lg" />
+            </NavLink>
             <button
               type="button"
               className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white"

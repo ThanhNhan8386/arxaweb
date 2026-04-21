@@ -57,7 +57,7 @@ export function ScienceSection() {
             ))}
           </div>
 
-          <Button variant="primary" size="lg" href="/solutions">
+          <Button variant="primary" size="lg" href="/services">
             Explore Research
           </Button>
         </div>

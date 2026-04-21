@@ -12,10 +12,6 @@ export function StatsSection() {
   return (
     <section className="bg-white py-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-8 flex items-center justify-between border-b border-gray-200 pb-4">
-          <span className="guideline-title">Performance Snapshot</span>
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gray-500">ARXA Standard</span>
-        </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {stats.map((stat) => {
             const Icon = stat.icon

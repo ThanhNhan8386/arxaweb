@@ -3,16 +3,14 @@ import { Logo } from '../ui/Logo'
 
 const footerLinks = {
   about: ['Our Story', 'Leadership', 'Careers', 'News & Media'],
-  solutions: ['Pharmaceutical', 'Clinical Research', 'Innovation', 'Supply Chain'],
+  services: ['Pharmaceutical', 'Clinical Research', 'Innovation', 'Supply Chain'],
 }
 
 export function Footer() {
   return (
     <footer className="relative overflow-hidden bg-navy-900 text-gray-400">
       <div className="absolute -right-20 top-[-40px] h-72 w-72 rounded-full bg-red-600/10 blur-3xl" aria-hidden="true" />
-      <div className="mx-auto flex max-w-7xl items-center justify-between border-b border-white/10 px-4 py-4 sm:px-6 lg:px-8">
-        <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gray-300">Brand Guidelines</span>
-        <span className="text-xs font-semibold uppercase tracking-[0.2em] text-gray-500">Version 1.0</span>
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
       </div>
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-4 lg:px-8">
         <div className="space-y-6">
@@ -47,9 +45,9 @@ export function Footer() {
         </div>
 
         <div>
-          <h3 className="mb-6 text-sm font-semibold uppercase tracking-[0.2em] text-white">Solutions</h3>
+          <h3 className="mb-6 text-sm font-semibold uppercase tracking-[0.2em] text-white">Services</h3>
           <ul className="space-y-3 text-sm">
-            {footerLinks.solutions.map((item) => (
+            {footerLinks.services.map((item) => (
               <li key={item}>
                 <a href="#" className="transition hover:text-white">
                   {item}
@@ -69,8 +67,8 @@ export function Footer() {
               </a>
             </li>
             <li>
-              <a href="mailto:ann.nguyen@arxaglobal.com" className="transition hover:text-white">
-                ann.nguyen@arxaglobal.com
+              <a href="mailto:contact@arxaglobal.com" className="transition hover:text-white">
+                contact@arxaglobal.com
               </a>
             </li>
             <li>

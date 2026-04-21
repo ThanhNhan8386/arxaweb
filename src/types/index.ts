@@ -38,9 +38,9 @@ export interface ContactFormData {
 }
 
 export const navItems: NavItem[] = [
+  { label: 'Home', href: '/' },
   { label: 'About Us', href: '/about' },
-  { label: 'Solutions', href: '/solutions' },
-  { label: 'Science', href: '/#science' },
-  { label: 'Careers', href: '/#careers' },
+  { label: 'Services', href: '/services' },
+  { label: 'News', href: '/news' },
   { label: 'Contact', href: '/contact' },
 ]

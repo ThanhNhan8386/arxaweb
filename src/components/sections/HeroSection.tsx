@@ -7,11 +7,6 @@ export function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-white px-4 pb-12 pt-16 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl rounded-[2rem] border border-navy-100 bg-white shadow-[0_18px_45px_rgba(13,31,92,0.08)]">
-        <div className="flex items-center justify-between border-b border-navy-100 px-6 py-4 sm:px-10">
-          <span className="guideline-title">Website Application</span>
-          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-navy-700">Version 1.0</span>
-        </div>
-
         <div className="grid gap-10 bg-gradient-to-r from-navy-800 via-navy-700 to-navy-800 px-6 py-10 sm:px-10 lg:grid-cols-2 lg:items-center lg:gap-16">
           <div className="space-y-8 text-white">
             <Badge label="Trusted Pharmaceutical Partner" variant="red" />
@@ -27,10 +22,10 @@ export function HeroSection() {
             </div>
 
             <div className="flex flex-col gap-4 sm:flex-row">
-              <Button variant="primary" size="lg" href="#solutions">
+              <Button variant="primary" size="lg" href="#services">
                 Learn More
               </Button>
-              <Button variant="outline-white" size="lg" href="/solutions">
+              <Button variant="outline-white" size="lg" href="/services">
                 Our Solutions
               </Button>
             </div>

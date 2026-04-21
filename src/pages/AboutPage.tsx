@@ -18,14 +18,6 @@ export function AboutPage() {
               <p className="mt-8 max-w-2xl text-base text-gray-300">
                 We work with manufacturers, investigators, and healthcare providers to simplify access and strengthen outcomes. From trials to long-term distribution, our approach is defined by clarity, compliance, and compassion.
               </p>
-              <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-                <Button variant="outline-white" size="lg" href="/contact">
-                  Contact Our Team
-                </Button>
-                <Button variant="primary" size="lg" href="/solutions">
-                  Explore Solutions
-                </Button>
-              </div>
             </div>
             <div>
               <PlaceholderImage label="Company Overview" aspectRatio="16/9" theme="dark" />
@@ -34,27 +26,34 @@ export function AboutPage() {
         </div>
       </section>
       <section className="bg-white py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-12 lg:grid-cols-3">
-            {[
-              {
-                headline: 'Regulatory Leadership',
-                text: 'Our compliance-first systems keep products safe and market-ready across countries.',
-              },
-              {
-                headline: 'Patient Focus',
-                text: 'Every service is designed with patient access, quality, and care at the center.',
-              },
-              {
-                headline: 'Global Operations',
-                text: 'Logistics and sourcing expertise ensure consistent availability across multiple regions.',
-              },
-            ].map((item) => (
-              <article key={item.headline} className="rounded-3xl border border-gray-200 bg-gray-50 p-8 shadow-sm">
-                <h3 className="text-xl font-semibold text-navy-800">{item.headline}</h3>
-                <p className="mt-4 text-sm leading-6 text-gray-600">{item.text}</p>
-              </article>
-            ))}
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <div className="space-y-12">
+            <div>
+              <h2 className="mb-6 text-3xl font-bold text-navy-800">Core Brand Value</h2>
+              <p className="text-lg leading-relaxed text-gray-600">
+                At the heart of our brand is "How We Live." We are committed to sustainable growth, serving with responsibility, maintaining trust, and improving health outcomes.
+              </p>
+            </div>
+
+            <div>
+              <h2 className="mb-6 text-3xl font-bold text-navy-800">Mission</h2>
+              <p className="text-lg leading-relaxed text-gray-600">
+                As leaders in next-generation healthcare, we prioritize community service, integrity, and understanding of diverse needs. Our mission is to simplify patient healthcare access, go above and beyond for pharmacies, and serve as a golden bridge between high-standard therapies and your well-being.
+              </p>
+            </div>
+
+            <div>
+              <h2 className="mb-6 text-3xl font-bold text-navy-800">Vision</h2>
+              <p className="text-lg leading-relaxed text-gray-600">
+                We aspire to be pioneers in promoting top-tier health products worldwide. Our aim is to become the foremost distributor of natural, organic, and plant-based products in the U.S.
+              </p>
+            </div>
+
+            <div className="pt-8">
+              <Button variant="outline" size="lg" href="/about/details">
+                Read More
+              </Button>
+            </div>
           </div>
         </div>
       </section>
